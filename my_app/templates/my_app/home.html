@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    {%load static%}
+    <meta http-equiv='refresh' content='15'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Satisfy" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" href="/">World Clock</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    </div>
+  </div>
+</nav>
+
+<div class='container'>
+<h1>140+ Countries Clock Time</h1>
+<table class="table table-striped table-light">
+        <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Countries with Capitals</th>
+               <th scope="col">Day and Time</th>
+               <th scope="col">Countries with Capitals</th>
+               <th scope="col">Day and Time</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in data_list %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{i.row1}}</td>
+              <td>{{i.time1}}</td>
+              <td>{{i.row2}}</td>
+              <td>{{i.time2}}</td>
+            </tr>
+        {%endfor%}
+
+        </tbody>
+     </table>
+<div/>
+
+</body>
